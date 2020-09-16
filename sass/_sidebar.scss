@@ -3,4 +3,36 @@
 
     grid-row: 1 / -1;
     grid-column: sidebar-start / sidebar-end;
+
+    display: flex;
+    justify-content: center;
+}
+
+%btn-icon {
+    background-color: $color-white;
+    width: 4.5rem;
+    height: 2px;
+    display: block;
+}
+
+.nav-btn {
+    border: none;
+    border-radius: 0;
+    margin-top: 4rem;
+    cursor: pointer;
+
+    @extend %btn-icon;
+
+    &::before,
+    &::after {
+        @extend %btn-icon;
+        content: "";
+    }
+
+    &::before {
+        transform: translateY(-1.5rem);
+    }
+    &::after {
+        transform: translateY(1.3rem);
+    }
 }
