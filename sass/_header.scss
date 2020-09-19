@@ -12,6 +12,14 @@
     grid-template-columns: minmax(min-content, max-content);
     grid-gap: 1.5rem;
 
+    @include respond(medium) {
+        grid-column: full-start / full-end;
+    }
+
+    @include respond(small) {
+        padding: 5rem;
+    }
+
     &__logo {
         height: 3rem;
         justify-self: center;
